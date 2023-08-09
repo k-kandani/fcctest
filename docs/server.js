@@ -40,6 +40,7 @@ app.route('/')
 
 // Respond not found to all the wrong routes
 app.use(function (req, res, next) {
+  console.log('Request received:', req.url);
   res.status(404);
   res.type('txt').send('Not found');
 });
